@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ujian No3 Benedictus Januardi</title>
+    <script defer src="fundamentalexam3.js"></script>
+</head>
+<body>
+            <style>
+                table,
+                th,
+                td {
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                    padding: 10px;
+                }
+                form {
+                    width: 45%;
+                    margin: 0 auto;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <form >
+                <fieldset>
+                    <legend>Filter</legend>
+                    <p>Nama: <input type="text" id="search" oninput="fnNamaFilter()"></p>
+                    <p>Umur: <input type="number" name="num1" id="num1" onkeyup="fnUmurFilter()"> - <input type="number" name="num2" id="num2"
+                            onkeyup="fnUmurFilter()"></p>
+                    <p>Pekerjaan: <select name="job" id="kerjaan">
+                        <!-- <option value ="DEV">DEVELOPER</option>
+                        <option value ="PM">PM</option>
+                        <option value ="CEO">CEO</option>
+                        <option value ="CTO">CTO</option> -->
+                        </select><br>
+                    <p><input type="button" value="Search Job" onclick=" funFilterJob()"></p>
+                    <br><input type = "radio" name="kelamin" id="kelamin1" value ="laki-laki">Pria
+                    <input type = "radio" name="kelamin" id="kelamin2" value ="Perempuan">Wanita
+                    </p>
+                    <p> <input type="button" value="Filter gender" onclick="filterKelamin()"">
+
+                </fieldset>
+                <fieldset>
+                    <legend>Sorting</legend>
+                    <input type="button" value="Sort Nama ↑" onclick="namaAscending()" >
+                    <input type="button" value="Sort Nama ↓" onclick="namaDescending()" >
+                    <input type="button" value="Sort Usia ↑" onclick="usiaAscending()">
+                    <input type="button" value="Sort Usia ↓" onclick="usiaDescending()">
+                    <input type="button" value="Sort Kelamin ↑" onclick="kelaminAscending()">
+                    <input type="button" value="Sort Pekerjaan ↑" onclick="pekerjaanAscending()">
+                </fieldset>
+                <fieldset>
+                    <legend>Input Data</legend>
+                    <table>
+                        <td><input type="text" name="nama" id="nama"></td>
+                        <td><input type="number" name="nama" id="umur"></td>
+                        <td><input type="text" name="nama" id="jobT"></td>
+                        <td><input type = "radio" name="kelamin" value ="laki-laki">Pria
+                            <input type = "radio" name="kelamin" value ="Perempuan">Wanita
+                        </td>
+                    </table>
+                    <p><input type="button" value="Submit" onclick="fn1()"></p>
+                </fieldset>
+                <fieldset>
+                    <legend>Tabel Data</legend>
+                    <table id="myTable">
+                        <thead>
+                            <th>Nama</th>
+                            <th>Umur</th>
+                            <th>Pekerjaan</th>
+                            <th>Kelamin</th>
+                        </thead>
+                        <tbody id="here">
+        
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </body>
+        
+        </html>
+        
+        
+</body>
+</html>

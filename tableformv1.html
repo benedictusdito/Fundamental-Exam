@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <script src="tableformv1.js"></script>
+<style>
+        table,tr,th,td, thead{
+            border: 2px solid black;
+            border-collapse : collapse
+        }
+        th, td {
+            padding: 20px
+        }
+    </style>
+</head>
+<body>
+    <table tabelManusia="manusia">
+        <thead>
+            <tr>
+                <th>Form Manusia</th>
+                <th>Form Hewan</th>
+            </tr>
+            <tr>
+                 <td>
+                    <p>
+                        <form id="inputmanusia" name = "formmanusia">
+                        Nama: <input type ="nama" id = "name">
+                      <br><br>
+                        Umur: <input type ="number" id = "age"><br><br>
+                        Kelamin:<input type = "radio" name="kelamin" value ="laki-laki">Pria
+                                <input type = "radio" name="kelamin" value ="Perempuan">Wanita
+                                <br><br>
+                        Pekerjaan:<select name ="pekerjaan">
+                            <option value ="PNS">PNS</option>
+                            <option value ="Wirausaha">Wirausaha</option>
+                            <option value ="Mekanik">Mekanik</option>
+                            <option value ="Guru">Guru</option> 
+                        </select> 
+                    </p> 
+                </form> 
+               <br>
+               <button onclick = "myFunction()">Tambahkan</button>
+               <br><br>
+            </td>
+            <td>
+                   <form id="Inputhewan" name = "formhewan  ">
+                       <p>
+                        Nama: <input type ="nama" id = "name1"><br><br>
+                        Umur: <input type ="number" id = "age1"><br><br>
+                        Kelamin:<input type = "radio" name="kelamin1" value ="laki-laki">Pria
+                        <input type = "radio" name="kelamin1" value ="Perempuan">Wanita<br><br>
+                        Status:<input type = "radio" name="habitat" value ="terbuka">Liar
+                                <input type = "radio" name="habitat" value ="tertutup">Peliharaan
+                        </p>
+                   </form>
+               <button onclick = "myFunction2()">Tambahkan</button>
+                </td>
+            </tr>
+        </thead>
+    </table>
+    <table class ="dua">
+        <thead>
+        <br>
+            <tr>
+                <th>Data Manusia</th>
+                <th>Data Hewan</th>
+            </tr>
+        </thead>
+            <tr>
+                <td>
+                    <table class="dalam">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Umur</th>
+                                <th>Kelamin</th>
+                                <th>Pekerjaan</th>
+                            </tr>
+                         </thead>
+                         <tbody id = "mans">
+
+                         </tbody>
+                    </table>
+                </td>
+            <td>
+                <table class ="dalam">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Umur</th>
+                            <th>Kelamin</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                <tbody id="hews">      
+                </tbody>
+                           
+                    </table>
+                </td>
+            </tr>
+    </table>
+</body>
+<script>
+
+//     var myFunction = () => {
+//         var name = document.getElementById("name").value
+//         var umur = document.getElementById("age").value
+//         var kelaminManusia = document.getElementsByName("kelamin")
+//         var job = document.getElementsByName("pekerjaan")[0].value
+//         var kelaminValue = ''
+    
+//         for(var i = 0 ; i<kelaminManusia.length;i++){
+//             if(kelaminManusia[i].checked == true){
+//                 kelaminValue = kelaminManusia[i].value
+//             }
+//         }
+
+
+    
+//         // console.log(`Name: ${name}
+//         // Umur: ${umur}
+//         // Kelamin: ${kelaminValue}
+//         // Pekerjaan: ${job}`);
+
+//         // console.log(kelaminManusiaValue);   
+        
+//     var table = document.getElementById("manusia")
+//     var row = table.insertRow(0)
+//     var cell1 = row.insertCell(0)
+//     var cell2 = row.insertCell(1)
+//     var cell3 =row.insertCell(2)
+//     var cell4 = row.insertCell(3)
+
+// var output = cell
+
+    
+//     }
+// var myFunction2 = () => {
+//     var namaHewan = document.getElementById("name1").value
+//     var umurHewan = document.getElementById("age1").value
+//     var kelaminHewan = document.getElementsByName("kelamin1")
+//     var kelaminHewanBaru = ''
+//         for(var i = 0; i<kelaminHewan.length;i++){
+//             if(kelaminHewan[i].checked == true){
+//                 kelaminHewanBaru = kelaminHewan[i].value
+//             }
+//         }
+//     var status = document.getElementsByName("habitat")
+//     var statusHewan = ''
+//     for(var i = 0; i<status.length;i++){
+//         if(status[i].checked == true){
+//             statusHewan = status[i].value
+//         }
+//     }
+
+    
+//     console.log(`Name: ${namaHewan}
+//         Umur: ${umurHewan}
+//         Kelamin: ${kelaminHewanBaru}
+//         Habitat: ${statusHewan}`);
+// }
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <script defer src="./seven.js"></script> -->
+</head>
+<body>
+    <form id="Form" name="Ini Form">
+       Nama : <input type="Nama" id ="name">
+       Usia : <input type="Nama" id ="age">
+
+       <p>
+           Gender: <input type = "radio" name="gender" value="Laki-laki">Pria
+           <input type = "radio" name="gender" value="perempuan">Wanita
+       </p>
+       <p>
+           Skill: <input type = "checkbox" name="skill" value="HTML">HTML
+           <input type = "checkbox" name="skill" value="CSS">CSS
+           <input type = "checkbox" name="skill" value="JavaScript">JavaScript
+       </p>
+
+    </form> 
+    <br> 
+    <button onclick ="myFunction()">Coba di klik!</button>
+    <p id="disini">Hasil</p>
+    
+    <script>
+        // var nama = {
+        //     first: "Ben",
+        //     1 : "Hello"
+        // }
+        // nama.first
+        // nama["first"]
+        // nama[1]
+
+        // console.log(nama);
+        
+       var myFunction = () =>{
+        // var result = document.getElementById('Form')[0].value
+
+        // var form = document.getElementById("form")
+        // var input = form[0]
+        // var data = input.value
+
+            // console.log(result);
+            // console.log(data);
+
+        var name = document.getElementById("name").value // Mengambil tag value Paragraf
+        var age = document.getElementById("age").value // mindahin value
+        var radio = document.getElementsByName("gender")
+        var checkbox = document.getElementsByName("skill")
+        var radioValue = ''
+        var skill = []
+        
+            for(var i = 0; i<radio.length;i++){
+                if(radio[i].checked == true){
+                    radioValue = radio[i].value
+                }
+            }
+
+            for(var i = 0;i<checkbox.length;i++){
+                if(checkbox[i].checked == true){
+                    skill.push(checkbox[i].value)
+                }
+            }
+
+        var output = document.getElementById("disini").innerHTML = `
+        <b>nama: ${name}</b></br>
+        <b>usia:${age}</b></br>
+        <b>Gender: ${radioValue}</b></br>
+        <b>Skill: ${skill.join(' - ')}</b></br>`   
+
+    
+
+        // console.log(value);     
+        console.log(`
+        nama: ${name}
+        usia: ${age}
+        gender: ${radioValue}`);
+
+        console.log(skill);
+        
+        
+       }
+    </script>
+
+
+</body>
+</html>

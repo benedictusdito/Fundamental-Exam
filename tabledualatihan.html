@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="tabledualatihan.js"></script>
+    <title>Document</title>
+<style>
+    table,th,td
+    {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        form {
+            width: 45%;
+            margin: 0 auto;
+        }
+</style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Filter</legend>
+            <p>Nama: <input type="text" id="search" oninput ="fnNamaFilter()"></p>
+            <p>Umur: <input type="number" name="umur1" id="umur1" onkeyup="fnUmurFilter()"> - 
+                     <input type="number" name="umur2" id="umur2" onkeyup="fnUmurFilter()"></p>
+            <p>Pekerjaan: <select name="job" id="kerjaan">
+                
+            </select></p>
+            <p><input type="button" value="Search Job" onclick = "fnSearchFilter()"></input></p>
+        </fieldset>
+        <fieldset>
+            <legend>Input Data</legend>
+            <table>
+                    <tr>
+                        <th>Nama: </th>
+                        <th>Umur: </th>
+                        <th>Pekerjaan: </th>
+                    </tr> 
+                <td><input type="text" name="nama" id="nama"></td>
+                <td><input type="number" name="umur" id="umur"></td>
+                <td><input type="text" name="pekerjaan" id="jobT"></td>
+            </table>  
+            <p>
+                <input type="button" value="submit" onclick="fn1()">
+            </p> 
+        </fieldset>
+        <fieldset>
+            <legend>Tabel Data</legend>
+            <table id="myTable">
+                <thead>
+                    <th>Nama</th>
+                    <th>Umur</th>
+                    <th>Pekerjaan</th>
+                </thead>
+                <tbody id="here">
+
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>
